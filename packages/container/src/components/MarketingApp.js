@@ -6,14 +6,14 @@ export default function MarketingApp() {
   const history = useHistory();
   const { pathname } = useLocation();
   useEffect(() => {
-    mount(appRoot.current, {
+    const { onParentNavigate } = mount(appRoot.current, {
       onNavigate: ({ pathname: nextPathname }) => {
-        console.log('container noticed navigation in marketing');
         if (pathname !== nextPathname) {
           history.push(nextPathname);
         }
       },
     });
+    history.listen(onParentNavigate);
   }, []);
   return <div ref={appRoot} />;
 }
