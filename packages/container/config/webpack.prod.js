@@ -18,6 +18,7 @@ const prodConfig = {
       filename: 'remoteEntry.js',
       remotes: {
         marketing: `marketing@${domain}/marketing/latest/remoteEntry.js`,
+        auth: `auth@${domain}/marketing/latest/remoteEntry.js`,
       },
       shared: packageJson.dependencies,
     }),

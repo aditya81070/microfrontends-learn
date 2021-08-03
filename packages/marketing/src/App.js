@@ -17,8 +17,8 @@ export default function App({ history }) {
       <StylesProvider generateClassName={generateClassName}>
         <Router history={history}>
           <Switch>
-            <Route exact path="/pricing" component={Pricing} />
-            <Route path="/" component={Landing} />
+            <Route path="/pricing" component={Pricing} />
+            <Route exact path="/" component={Landing} />
           </Switch>
         </Router>
       </StylesProvider>

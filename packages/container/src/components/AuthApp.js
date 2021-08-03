@@ -1,11 +1,10 @@
 import React, { useRef, useEffect } from 'react';
-import { mount } from 'marketing/MarketingApp';
+import { mount } from 'auth/AuthApp';
 import { useHistory, useLocation } from 'react-router-dom';
 
-export default function MarketingApp() {
+export default function AuthApp() {
   const appRoot = useRef();
   const history = useHistory();
-
   useEffect(() => {
     const { onParentNavigate } = mount(appRoot.current, {
       initialPath: history.location.pathname,
