@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import { mount } from 'auth/AuthApp';
-import { useHistory, useLocation } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 export default function AuthApp({ onSignIn }) {
   const appRoot = useRef();
